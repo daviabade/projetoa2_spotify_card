@@ -1,0 +1,183 @@
+/* DECLARAÇÃO DA FONTE LOCAL */
+/* --- THIN (Peso 100) --- */
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('./fontes/Avenir Next Thin.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('./fontes/Avenir Next Thin Italic.otf') format('opentype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+/* --- ULTRA LIGHT (Peso 200) --- */
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('./fontes/Avenir Next Ultra Light.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('./fontes/Avenir Next Ultra Light Italic.otf') format('opentype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+/* --- LIGHT (Peso 300) --- */
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('./fontes/Avenir Next Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('./fontes/Avenir Next Light Italic.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* --- REGULAR (Peso 400 - Padrão) --- */
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('./fontes/Avenir Next Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('./fontes/Avenir Next Italic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* --- MEDIUM (Peso 500) --- */
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('./fontes/Avenir Next Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('./fontes/Avenir Next Medium Italic.otf') format('opentype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* --- DEMI (Peso 600 - Semi-Bold) --- */
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('./fontes/Avenir Next Demi.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('./fontes/Avenir Next Demi Italic.otf') format('opentype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* --- BOLD (Peso 700 - Negrito) --- */
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('./fontes/Avenir Next Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('./fontes/Avenir Next Bold Italic.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* --- HEAVY (Peso 800 - Extra Bold) --- */
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('./fontes/Avenir Next Heavy.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('./fontes/Avenir Next Heavy Italic.otf') format('opentype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+/* RESET E VARIÁVEIS GLOBAIS */
+:root {
+    --bg-dark: #121212;
+    --bg-darker: #121212;
+    --spotify-green: #1ED760;
+    --spotify-green-hover: #1ed760;
+    --text-white: #FFFFFF;
+    --text-gray: #A7A7A7;
+    --font-main: 'Avenir Next', sans-serif; /* Usando a sua fonte local! */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: var(--font-main);
+    overflow-x: hidden;
+}
+
+/* ESTILOS DO CABEÇALHO */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 5%;
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: var(--spotify-green);
+}
+
+/* BOTÃO PRINCIPAL */
+.btn-primary {
+    background-color: var(--spotify-green);
+    color: var(--bg-darker);
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--spotify-green-hover);
+    transform: scale(1.05);
+}
