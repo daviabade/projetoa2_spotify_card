@@ -1,4 +1,4 @@
-# 🎵 Spotify Card Generator
+# Spotify Card Personalizado!!!
 
 Uma aplicação web interativa que permite aos usuários criar cards musicais personalizados inspirados no design premium do Spotify. Este projeto foi desenvolvido com foco em UI/UX e manipulação avançada do DOM para a disciplina de Análise e Desenvolvimento de Sistemas.
 
