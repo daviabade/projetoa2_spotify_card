@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Gerador de Card</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+</head>
+<body class="page-gerador">
+    <!-- CABEÇALHO (Reaproveitado) -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="./imgs/logo_spotify_verde.svg" alt="Spotify Logo" width="120" style="filter: brightness(0);"> 
+        </div>
+        
+        <nav class="menu">
+            <a href="index.html#inicio">Ínicio</a>
+            <a href="index.html#como-funciona">Como funciona</a>
+            <a href="index.html#sobre">Sobre</a>
+            <a href="gerador.html">Gerador</a>
+        </nav>
+
+        <a href="index.html" class="btn-nav-dark">Voltar ao Início</a>
+    </header>
+
+    <!-- ÁREA PRINCIPAL DO GERADOR -->
+    <main class="gerador-container">
+        
+        <!-- PAINEL ESQUERDO: FORMULÁRIO -->
+        <div class="painel-form">
+            <h2>Eternize seu<br><span class="text-green">Momento</span></h2>
+            <p class="form-desc">Preencha os dados e veja sua memória ganhar vida no card.</p>
+            
+            <form id="cardForm">
+                <div class="input-group">
+                    <label for="musica">Nome da Música:</label>
+                    <input type="text" id="musica" placeholder="Ex: From Me to You" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="artista">Artista:</label>
+                    <input type="text" id="artista" placeholder="Ex: The Beatles" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="vibe">Qual a vibe desse momento?</label>
+                    <select id="vibe">
+                        <option value="padrao">Padrão (Escuro)</option>
+                        <option value="alegria">Alegria (Amarelo)</option>
+                        <option value="romance">Romance (Vermelho)</option>
+                        <option value="serio">Sério (Cinza)</option>
+                    </select>
+                </div>
+
+                <div class="upload-group">
+                    <label>Escolha sua foto:</label>
+                    <!-- Input de arquivo escondido, vamos estilizar um botão falso por cima -->
+                    <label for="foto" class="btn-upload">Upload</label>
+                    <input type="file" id="foto" accept="image/*" style="display: none;" required>
+                </div>
+
+                <button type="submit" class="btn-primary btn-gerar">Gerar Memória</button>
+            </form>
+        </div>
+
+        <!-- PAINEL DIREITO: O CARD (PREVIEW) -->
+        <div class="painel-preview">
+            <!-- Este é o elemento que o JavaScript vai manipular -->
+            <div class="spotify-card" id="spotifyCard">
+                <!-- A imagem de capa -->
+                <div class="card-cover-container">
+                    <img src="" alt="Capa gerada" id="cardCover" style="display: none;">
+                    <!-- Placeholder que aparece antes de enviar a foto -->
+                    <div class="card-placeholder" id="cardPlaceholder">Sua Foto Aqui</div>
+                </div>
+                
+                <!-- Os textos do card -->
+                <div class="card-info">
+                    <h3 id="cardMusica">Nome da Música</h3>
+                    <p id="cardArtista">Artista</p>
+                </div>
+                
+                <!-- Logo no rodapé do card -->
+                <div class="card-logo">
+                    <img src="./imgs/logo_spotify_verde.svg" alt="Spotify" width="80" style="filter: brightness(0) invert(1);">
+                </div>
+            </div>
+        </div>
+
+    </main>
+<!-- RODAPÉ (FOOTER) -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="./imgs/logo_spotify_verde.svg" alt="Spotify" width="120" style="filter: brightness(0) invert(1);">
+            </div>
+            
+            <nav class="footer-menu">
+                <a href="#inicio">Ínicio</a>
+                <a href="#como-funciona">Como funciona</a>
+                <a href="#sobre">Sobre</a>
+                <a href="gerador.html">Gerador</a>
+            </nav>
+
+            <!-- Botão escuro!!!! -->
+            <a href="gerador.html" class="btn-footer">Criar meu card</a>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Davi Abade de Castro. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
