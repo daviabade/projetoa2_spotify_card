@@ -187,7 +187,7 @@ body {
  */
 .hero {
     position: relative;
-    min-height: 100vh; /* Ocupa 100% da altura da tela */
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -199,13 +199,13 @@ body {
 /* O Efeito de Brilho Verde (Glow) */
 .hero-glow {
     position: absolute;
-    bottom: -300px; /* Posicionado bem na borda inferior */
+    bottom: -300px;
     left: 50%;
     transform: translateX(-50%);
     width: 800px;
     height: 500px;
     background-color: var(--spotify-green);
-    filter: blur(150px); /* A mágica do efeito "esfumaçado" */
+    filter: blur(150px);
     border-radius: 50%;
     opacity: 0.55;
     z-index: 1;
@@ -214,7 +214,7 @@ body {
 /* Conteúdo da Hero (Textos) */
 .hero-content {
     position: relative;
-    z-index: 2; /* Garante que o texto fique acima do brilho verde */
+    z-index: 2;
     max-width: 800px;
     margin-top: 60px;
 }
@@ -256,9 +256,8 @@ body {
 
 /* =========================================
    RODAPÉ (FOOTER)
-========================================= */
+*/
 .footer {
-    /* Cria um leve gradiente escuro para separar o conteúdo do fundo verde */
     background: linear-gradient(to bottom, transparent, var(--bg-darker));
     padding: 60px 5% 30px 5%;
     position: relative;
@@ -282,6 +281,7 @@ body {
     color: var(--text-white);
     text-decoration: none;
     font-size: 14px;
+    font-weight: 500;
     transition: color 0.3s ease;
 }
 
@@ -321,3 +321,179 @@ body {
     font-weight: 600;
 }
 
+/* =========================================
+   SECÇÃO COMO FUNCIONA
+*/
+.como-funciona {
+    padding: 100px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Cabeçalho da secção (Título + Texto) */
+.como-funciona-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    gap: 40px;
+}
+
+.como-funciona-header h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    flex: 1;
+}
+
+.text-green {
+    color: var(--spotify-green);
+}
+
+.como-funciona-header p {
+    flex: 1;
+    font-size: 1.1rem;
+    color: var(--text-white);
+    line-height: 1.6;
+    max-width: 400px;
+    font-weight: 500;
+}
+
+/* Grelha dos 3 passos */
+.passos-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    gap: 20px;
+}
+
+/* Estilo individual de cada Card */
+.card-passo {
+    background-color: rgba(255, 255, 255, 0.03); /* Fundo quase transparente */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 40px 30px;
+    flex: 1;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+
+.card-passo:hover {
+    transform: translateY(-10px);
+    border-color: var(--spotify-green);
+}
+
+.card-passo h3 {
+    color: var(--spotify-green);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.card-passo p {
+    color: var(--text-gray);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: auto;
+}
+
+/* Setas verdes circulares entre os cards */
+.seta-passo {
+    background-color: var(--spotify-green);
+    color: var(--bg-darker);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+/* Alinhamento do botão inferior */
+.como-funciona-action {
+    text-align: center;
+}
+
+/* =========================================
+   SECÇÃO SOBRE */
+.sobre {
+    padding: 100px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.sobre-titulo-principal {
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 60px;
+    letter-spacing: -1px;
+}
+
+.sobre-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* Card do Lado Esquerdo */
+.sobre-card {
+    flex: 1;
+    background-color: var(--bg-darker);
+    border: 1px solid var(--spotify-green);
+    border-radius: 16px;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sobre-overline {
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--text-gray);
+    margin-bottom: 24px;
+    font-weight: 500;
+}
+
+.sobre-nome {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--text-white);
+}
+
+.sobre-desc {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-white);
+    margin-bottom: 40px;
+    font-weight: 500;
+    max-width: 90%;
+}
+
+.btn-portfolio {
+    margin-top: auto; 
+}
+
+/* Espaço do Vídeo (Lado Direito) */
+.sobre-video {
+    flex: 1;
+    background-color: #C4C4C4; 
+    border-radius: 16px;
+    min-height: 380px;
+}
