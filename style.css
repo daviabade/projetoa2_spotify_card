@@ -135,7 +135,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ESTILOS DO CABEÇALHO */
+/* estilizaçãop DO CABEÇALHO */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -181,3 +181,143 @@ body {
     background-color: var(--spotify-green-hover);
     transform: scale(1.05);
 }
+
+/* =========================================
+   SEÇÃO HERO
+ */
+.hero {
+    position: relative;
+    min-height: 100vh; /* Ocupa 100% da altura da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+/* O Efeito de Brilho Verde (Glow) */
+.hero-glow {
+    position: absolute;
+    bottom: -300px; /* Posicionado bem na borda inferior */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 500px;
+    background-color: var(--spotify-green);
+    filter: blur(150px); /* A mágica do efeito "esfumaçado" */
+    border-radius: 50%;
+    opacity: 0.55;
+    z-index: 1;
+}
+
+/* Conteúdo da Hero (Textos) */
+.hero-content {
+    position: relative;
+    z-index: 2; /* Garante que o texto fique acima do brilho verde */
+    max-width: 800px;
+    margin-top: 60px;
+}
+
+.hero-overline {
+    display: block;
+    font-size: 14px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--text-gray);
+    margin-bottom: 24px;
+}
+
+.hero-title {
+    font-size: 4.5rem; 
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    letter-spacing: -2px;
+}
+
+.hero-desc {
+    font-size: 1.1rem;
+    color: var(--text-white);
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    font-weight: 500;
+}
+
+.hero-desc strong {
+    font-weight: 700;
+}
+
+.btn-hero {
+    padding: 16px 36px;
+    font-size: 16px;
+}
+
+/* =========================================
+   RODAPÉ (FOOTER)
+========================================= */
+.footer {
+    /* Cria um leve gradiente escuro para separar o conteúdo do fundo verde */
+    background: linear-gradient(to bottom, transparent, var(--bg-darker));
+    padding: 60px 5% 30px 5%;
+    position: relative;
+    z-index: 10;
+    margin-top: 10px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.footer-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-menu a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-menu a:hover {
+    color: var(--spotify-green);
+}
+
+/* Botão escuro do rodapé */
+.btn-footer {
+    background-color: var(--bg-darker);
+    color: var(--text-white);
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-footer:hover {
+    background-color: var(--text-white);
+    color: var(--bg-darker);
+    transform: scale(1.05);
+}
+
+/* Linha divisória e Copyright */
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+.footer-bottom p {
+    color: var(--text-white);
+    font-size: 12px;
+    font-weight: 600;
+}
+
