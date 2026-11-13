@@ -15,6 +15,3 @@ Uma aplicação web interativa que permite aos usuários criar cards musicais pe
 *   **HTML5:** Semântica estrutural limpa e organizada.
 *   **CSS3:** Variáveis globais, Flexbox, Media Queries, animações suaves e efeitos visuais como *Glow* (iluminação difusa por código).
 *   **JavaScript (Vanilla):** Tratamento de eventos (`input`, `change`, `submit`) e manipulação direta do DOM sem uso de frameworks.
-
-## Criado por
-Davi Abade de Castro
