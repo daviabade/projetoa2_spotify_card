@@ -688,10 +688,10 @@ body.page-gerador {
 }
 
 .page-gerador .menu a:hover {
-    color: #ffffff; /* Fica branco ao passar o rato para dar contraste com o fundo verde */
+    color: #ffffff; 
 }
 
-/* Novo botão da navbar do gerador (Preto -> Branco) */
+
 .btn-nav-dark {
     background-color: var(--bg-darker);
     color: var(--text-white);
@@ -731,4 +731,67 @@ body.page-gerador {
 .btn-upload:hover {
     background-color: var(--bg-darker);
     color: #A7A7A7;
+}
+
+
+
+/* =========================================
+   RESPONSIVIDADE (Celulares e Tablets)
+========================================= */
+@media (max-width: 768px) {
+    
+    /* 1. CABEÇALHO E RODAPÉ */
+    .navbar, .footer-content {
+        flex-direction: column; 
+        gap: 20px;
+        padding: 20px 5%;
+        text-align: center;
+    }
+    
+    .menu, .footer-menu {
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+
+    /* 2. TEXTOS GRANDES */
+    .hero-title, .como-funciona-header h2, .sobre-titulo-principal, .painel-form h2 {
+        font-size: 2.5rem; 
+    }
+
+    /* CORREÇÃO DO ANEXO 2: Empurra o texto para baixo da navbar empilhada */
+    .hero-content {
+        margin-top: 180px;
+    }
+
+    /* 3. COLUNAS VIRAM LINHAS */
+    .como-funciona-header, .passos-container {
+        flex-direction: column; 
+        text-align: center;
+    }
+    
+    .seta-passo {
+        transform: rotate(90deg); 
+        margin: 10px 0;
+    }
+
+    .sobre-container {
+        flex-direction: column;
+    }
+
+    .gerador-container {
+        flex-direction: column;
+        padding-top: 220px; /* Mais espaço no topo do gerador por conta do menu */
+    }
+
+    /* CORREÇÃO DO ANEXO 1: Força os painéis e o card a usarem 100% do espaço */
+    .painel-form, .painel-preview {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    /* Ajuste fino para a foto do card ficar grandona e proporcional no celular */
+    .spotify-card {
+        max-width: 100%;
+        padding: 20px;
+    }
 }

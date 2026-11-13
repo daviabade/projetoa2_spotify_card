@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const spotifyCard = document.getElementById('spotifyCard');
 
     // 1. EVENTO: TEXTO EM TEMPO REAL (Reatividade)
-    // Atualiza o card no exato milissegundo em que você digita
+    // FAz a preview
     inputMusica.addEventListener('input', (e) => {
         cardMusica.textContent = e.target.value || 'Nome da Música';
     });
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', function(event) {
         event.preventDefault(); // Evita recarregar a página
         
-        // Efeito de pulso rápido no card para mostrar que a ação foi concluída
+        // Efeito de pulso rápido no card para mostrar que a ação foi 'concluída"
         spotifyCard.style.transform = 'scale(1.05)';
         spotifyCard.style.transition = 'transform 0.2s ease';
         
